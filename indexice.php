@@ -12,7 +12,7 @@
     <title>ร้านไอศครีมไผ่ทอง</title>
     <div class="topnav">
         <a class="active" href="order.php">จองคิว</a>
-        <a href="index.php">เพิ่มรสชาติไอศครีม</a>
+        <a href="indexice.php">เพิ่มรสชาติไอศครีม</a>
     </div>
 </head>
 

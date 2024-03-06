@@ -14,7 +14,8 @@ if (isset($_POST['FlavorID']) && isset($_POST['FlavorName']) && isset($_POST['Fl
     echo 'Flavorprice = ' . $Flavorprice;
 
 
-    $sql = "UPDATE flavor SET FlavorName = :FlavorName, Flavorprice = :Flavorprice WHERE FlavorID = :FlavorID";
+    $sql =
+        "UPDATE flavor SET FlavorName = :FlavorName, Flavorprice = :Flavorprice WHERE FlavorID = :FlavorID";
     $stmt = $conn->prepare($sql);
 
     $stmt->bindParam(':FlavorName', $_POST['FlavorName']);
@@ -22,10 +23,10 @@ if (isset($_POST['FlavorID']) && isset($_POST['FlavorName']) && isset($_POST['Fl
     $stmt->bindParam(':FlavorID', $_POST['FlavorID']);
 
 
-    echo '
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">';
+
+    echo '<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>';
+    echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>';
+    echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">';
 
     if ($stmt->execute()) {
         echo '
